@@ -172,8 +172,9 @@ export default function QuotePage() {
         timeline: "",
         description: "",
       });
-    } catch (error) {
-      alert("Failed to submit quote request. Please try again.");
+} catch (error) {
+   console.error("Error submitting quote request:", error);
+   alert("Failed to submit quote request. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
