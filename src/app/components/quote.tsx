@@ -173,6 +173,7 @@ export default function QuotePage() {
         description: "",
       });
     } catch (error) {
+      console.error("Error submitting quote request:", error);
       alert("Failed to submit quote request. Please try again.");
     } finally {
       setIsSubmitting(false);
